@@ -21,8 +21,8 @@ public class SubjectService {
         return subjectRepository.findAll();
     }
 
-    public Optional<Subject> getSubjectById(Long id) {
-        return subjectRepository.findById(id);
+    public Subject getSubjectById(Long id) {
+        return subjectRepository.findById(id).orElse(null);
     }
 
     public Subject createSubject(Subject subject) {
@@ -30,11 +30,15 @@ public class SubjectService {
     }
 
     public Subject updateSubject(Long id, Subject updatedSubject) {
+        Subject newSubject= null;
         if (subjectRepository.existsById(id)) {
-            updatedSubject.setId(id);
-            return subjectRepository.save(updatedSubject);
+            newSubject = getSubjectById(id);
+            newSubject.setId(id);
+            newSubject.setName(updatedSubject.getName());
+            newSubject.setDepartment(updatedSubject.getDepartment());
+            return subjectRepository.save(newSubject);
         }
-        return null;
+        return newSubject;
     }
 
     public void deleteSubject(Long id) {

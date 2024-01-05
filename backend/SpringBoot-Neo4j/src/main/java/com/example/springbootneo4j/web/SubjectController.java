@@ -26,10 +26,8 @@ public class SubjectController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Subject> getSubjectById(@PathVariable Long id) {
-        return subjectService.getSubjectById(id)
-                .map(subject -> new ResponseEntity<>(subject, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    public Subject getSubjectById(@PathVariable Long id) {
+        return subjectService.getSubjectById(id);
     }
 
     @PostMapping

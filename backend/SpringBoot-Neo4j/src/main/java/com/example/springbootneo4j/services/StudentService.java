@@ -21,8 +21,8 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public Optional<Student> getStudentById(Long id) {
-        return studentRepository.findById(id);
+    public Student getStudentById(Long id) {
+        return studentRepository.findById(id).orElse(null);
     }
 
     public Student createStudent(Student student) {
@@ -30,11 +30,15 @@ public class StudentService {
     }
 
     public Student updateStudent(Long id, Student updatedStudent) {
+        Student newStudent = null;
         if (studentRepository.existsById(id)) {
-            updatedStudent.setId(id);
-            return studentRepository.save(updatedStudent);
+            newStudent = getStudentById(id);
+            newStudent.setId(id);
+            newStudent.setName(updatedStudent.getName());
+            newStudent.setSubjects(updatedStudent.getSubjects());
+            return studentRepository.save(newStudent);
         }
-        return null;
+        return newStudent;
     }
 
     public void deleteStudent(Long id) {

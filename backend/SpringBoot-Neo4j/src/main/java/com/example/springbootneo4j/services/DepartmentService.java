@@ -21,8 +21,8 @@ public class DepartmentService {
         return departmentRepository.findAll();
     }
 
-    public Optional<Department> getDepartmentById(Long id) {
-        return departmentRepository.findById(id);
+    public Department getDepartmentById(Long id) {
+        return departmentRepository.findById(id).orElse(null);
     }
 
     public Department createDepartment(Department department) {
@@ -30,11 +30,14 @@ public class DepartmentService {
     }
 
     public Department updateDepartment(Long id, Department updatedDepartment) {
+        Department newDepartment = null;
         if (departmentRepository.existsById(id)) {
-            updatedDepartment.setId(id);
-            return departmentRepository.save(updatedDepartment);
+            newDepartment = getDepartmentById(id);
+            newDepartment.setId(id);
+            newDepartment.setName(updatedDepartment.getName());
+            return departmentRepository.save(newDepartment);
         }
-        return null;
+        return newDepartment;
     }
 
     public void deleteDepartment(Long id) {
