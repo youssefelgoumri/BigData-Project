@@ -1,0 +1,97 @@
+/* Style général pour le tableau */
+table {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Style pour les cellules du tableau */
+th, td {
+  border: 1px solid #ecf0f1;
+  padding: 10px; /* Réduit la taille du rembourrage */
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Style pour l'en-tête du tableau */
+thead {
+  background-color: #34495e;
+  color: white;
+}
+
+/* Style pour les lignes paires du tableau */
+tbody tr:nth-child(even) {
+  background-color: #ecf0f1;
+}
+
+/* Style pour les lignes au survol du tableau */
+tbody tr:hover {
+  background-color: #d4e6f1;
+}
+
+/* Style pour le bouton "Add a New Subject" */
+.btn-new {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  margin: 20px auto;
+}
+
+.btn-new:hover {
+  background-color: #219d54;
+}
+
+/* Style pour le bouton "Department Associate" */
+.btn-associate {
+  background-color: #2c3e50; /* Nouvelle couleur (bleu foncé) */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn-associate:hover {
+  background-color: #1a252f; /* Nouvelle couleur au survol */
+}
+
+/* Style pour les boutons d'action (Update et Delete) */
+.btn-update,
+.btn-delete {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.btn-update {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+.btn-update:hover,
+.btn-delete:hover {
+  opacity: 0.8;
+}
+.title {
+  text-align: center;
+  margin-top: 20px; /* Espace en haut du titre (ajustez selon vos besoins) */
+}
