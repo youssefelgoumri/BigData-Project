@@ -44,17 +44,9 @@ git clone https://github.com/youssefelgoumri/BigData-Project.git
 
 Navigate to the backend directory:
 
-bash
-
-Copy code
-
 cd bigdata-project/backend
 
 Build and run the Spring Boot application:
-
-bash
-
-Copy code
 
 ./mvnw spring-boot:run
 
@@ -62,25 +54,13 @@ Copy code
 
 Navigate to the frontend directory:
 
-bash
-
-Copy code
-
 cd bigdata-project/frontend
 
 Install dependencies:
 
-bash
-
-Copy code
-
 npm install
 
 Start the Angular development server:
-
-bash
-
-Copy code
 
 ng serve
 
