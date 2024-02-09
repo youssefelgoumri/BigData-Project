@@ -1,0 +1,33 @@
+  <br> 
+  <h1 class="title">List of All Subject </h1>
+
+
+
+  <table>
+      <thead>
+        <tr>
+          <th>ACTION</th>
+          <th>Id</th>
+          <th>Subject Name</th>
+          
+          
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let subject of subjects " >
+          <td>
+            <button class="btn-update" > UPDATE </button>   
+            <button class="btn-delete" (click)="deleteSubject(subject.id)" > DELETE </button>
+          </td>
+          <td>{{subject.id}}</td>
+          <td>{{subject.name}}</td>
+          <td><button class="btn-associate" routerLink="/Alldepartment">Department Associate</button>  </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    
+    
+    
+    

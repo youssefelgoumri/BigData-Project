@@ -1,0 +1,33 @@
+
+<h1 class="title">List of All Student</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th>ACTION</th>
+        <th>Id</th>
+        <th>Student Name</th>
+         
+         
+        <th>Subject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let student of students " >
+        <td>
+          <button class="btn-update" > UPDATE </button>   
+          <button class="btn-delete" (click)="deleteStudent(student.id)"> DELETE </button>
+        </td>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td><button class="btn-associate" routerLink="/Allsubject">Subjects Associates</button>  </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button class="btn-new" routerLink="/student">Add a New Student </button>
+ 
+  
+  
+  
+  

@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="form-container"></div>
+    <h2 class="form-title"> Add Student </h2>
+    
+    <form  [formGroup]= "postStudentForm" >
+      <div>
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" formControlName="name" required>
+      </div>
+    
+      <div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subjects" formControlName="subjects" required>
+      </div>
+    
+      <!-- <div>
+        <label for="type">Type:</label>
+        <input type="text" id="type" formControlName="type" required>
+      </div>
+    
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description" required></textarea>
+      </div>
+    
+      <div>
+        <label for="photo">Photo:</label>
+        <input type="text" id="photo" formControlName="photo" required>
+      </div> -->
+    
+      
+    
+      <button type="submit" (click)="postStudent()">Submit</button>
+    </form>
+    
+    
+    
+  
+  
+  
+  </div>
+  
+  
+  
+  
