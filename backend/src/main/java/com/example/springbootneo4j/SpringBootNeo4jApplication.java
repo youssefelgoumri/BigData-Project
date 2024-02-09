@@ -32,9 +32,9 @@ public class SpringBootNeo4jApplication {
             //delete previous data
 
 
-//            departmentRepository.deleteAll();
-//            subjectRepository.deleteAll();
-//            studentRepository.deleteAll();
+            departmentRepository.deleteAll();
+            subjectRepository.deleteAll();
+            studentRepository.deleteAll();
 
 
             Department deptMath = new Department("Math");
@@ -52,6 +52,9 @@ public class SpringBootNeo4jApplication {
             subjects.add(svt);
             Student student = new Student("Youssef El Goumri", subjects);
             studentRepository.save(student);
+
+            Student student2 = new Student("Ismail Karmout", subjects);
+            studentRepository.save(student2);
 
         };
     }
