@@ -108,3 +108,7 @@ List of Department associate to a Subject
 List of all Departments
 
 ![image](https://github.com/youssefelgoumri/BigData-Project/assets/94170257/d16ebcf6-e3e4-43b5-95e7-3d45113ac24b)
+
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
